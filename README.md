@@ -21,6 +21,6 @@ Il y a également un fichier 'urls.txt' à la racine du projet/solution où il f
 ## Headers pour les stats
 
 Il y a trois headers spécifiques que nous avons choisi pour renvoyer les statistiques :
-- `x-status-cache` : pour voir combien de fois nous avons accédé au cache proprement
-- `set-cookies` : pour savoir quels sont les champs de cookies les plus utilisés/requis
-- `vary` : pour savoir quels sont les headers les plus utilisés pour répondre à nos requêtes.
+- `x-status-cache` : pour voir combien de fois nous avons accédé au cache proprement, cet header peut être utile pour résoudre les problèmes de performances sur un site Web, car il donne un aperçu du comportement de mise en cache du serveur.
+- `set-cookies` : pour savoir quels sont les champs de cookies les plus utilisés/requis. Il est utile de connaître les cookies utilisés de manière récurrente et l'implication que cela pourrait avoir sur de nombreux aspects tels que la confidentialité et les performances.
+- `vary` : pour savoir quels sont les headers les plus utilisés pour répondre à nos requêtes, cet header peut aider à améliorer la mise en cache et à réduire les requêtes inutiles adressées au serveur, ce qui permet une navigation Web plus rapide et plus efficace pour les utilisateurs.
