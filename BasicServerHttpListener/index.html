@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Stats Web Page</title>
+</head>
+<body>
+    <h1>Stats Web Page</h1>
+    <p>Press a button to get some stats:</p>
+    <button id="btn-exo1"> Popular Servers Stats </button>
+    <button id="btn-exo2"> Age stats</button>
+    <button id="btn-exo3"> Interesting stats</button>
+    <button id="btn-exo3"> Interesting stats</button>
+    <div id="output">
+
+    </div>
+</body>
+
+<script>
+    let btn1 = document.getElementById("btn-exo1");
+    let btn2 = document.getElementById("btn-exo2");
+    let btn3 = document.getElementById("btn-exo3");
+
+    let output = document.getElementById("output");
+
+    btn1.addEventListener("click", function(){
+        fetch('http://localhost:8080/')
+        .then(response => response.json())
+        .then(data => {
+            for(const field in data.Result){
+                let span = document.createElement("span");
+                span.innerHTML = field + ": " + data.Result[field] + "<br>";
+                output.appendChild(span);
+            }
+        })
+        .catch(error => console.error(error));
+    });
+
+    btn2.addEventListener("click", function(){
+        fetch('http://localhost:8081/')
+        .then(response => response.json())
+        .then(data => {
+            for(const field in data.Result){
+                let span = document.createElement("span");
+                span.innerHTML = field + ": " + data.Result[field] + "<br>";
+                output.appendChild(span);
+            }
+        })
+        .catch(error => console.error(error));
+    });
+
+    btn3.addEventListener("click", function () {
+        console.log("here");
+        fetch('http://localhost:8082/')
+        .then(response => response.json())
+        .then(data => {
+            console.log("data: ", data)
+            for(const field in data.Result){
+                let div = document.createElement("div");
+                let h1 = document.createElement("h1");
+                let p = document.createElement("p");
+                h1.innerHTML = field;
+                for(const field2 in data.Result[field]){
+                    p.innerHTML += field2 + ": " + data.Result[field][field2] + "<br>";
+                }
+                div.appendChild(h1);
+                div.appendChild(p);
+                output.appendChild(div);
+            }
+        })
+        .catch(error => console.error(error));
+    });
+</script>
+</html>

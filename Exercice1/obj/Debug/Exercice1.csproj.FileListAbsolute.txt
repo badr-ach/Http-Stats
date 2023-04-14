@@ -1,0 +1,11 @@
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\bin\Debug\Exercice1.exe.config
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\bin\Debug\Exercice1.exe
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\bin\Debug\Exercice1.pdb
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\obj\Debug\Exercice1.csproj.AssemblyReference.cache
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\obj\Debug\Exercice1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\obj\Debug\Exercice1.csproj.CoreCompileInputs.cache
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\obj\Debug\Exercice1.csproj.CopyComplete
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\obj\Debug\Exercice1.exe
+C:\Users\Badr\Desktop\TD1\HttpListener\Exercice1\obj\Debug\Exercice1.pdb

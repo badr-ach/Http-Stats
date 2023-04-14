@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Stats Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
+        button {
+            display: block;
+            width: 250px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #534caf;
+            color: #FFFFFF;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e5e8e;
+        }
+        #output {
+            margin: 50px auto;
+            max-width: 600px;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+        }
+        span {
+            display: block;
+            margin-bottom: 10px;
+        }
+        h1 + p {
+            margin-top: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Stats Web Page</h1>
+    <p>Press a button to get some stats:</p>
+    <button id="btn-exo1"> Popular Servers Stats </button>
+    <button id="btn-exo2"> Age stats</button>
+    <button id="btn-exo3"> Interesting stats</button>
+    <div id="output">
+    
+    </div>
+    
+</body>
+
+<script>
+    let btn1 = document.getElementById("btn-exo1");
+    let btn2 = document.getElementById("btn-exo2");
+    let btn3 = document.getElementById("btn-exo3");
+
+    let output = document.getElementById("output");
+
+    btn1.addEventListener("click", function(){
+        fetch('http://localhost:8080/')
+        .then(response => response.json())
+        .then(data => {
+            output.innerHTML = "";
+            let h1 = document.createElement("h1");
+            h1.innerHTML = "Popular Servers Stats";
+            for(const field in data.Result){
+                let span = document.createElement("span");
+                span.innerHTML = field + " : " + data.Result[field] + "<br>";
+                output.appendChild(span);
+            }
+        })
+        .catch(error => console.error(error));
+    });
+
+    btn2.addEventListener("click", function(){
+        fetch('http://localhost:8081/')
+        .then(response => response.json())
+        .then(data => {
+            output.innerHTML = "";
+            let h1 = document.createElement("h1");
+            h1.innerHTML = "Age stats";
+            for(const field in data.Result){
+                let span = document.createElement("span");
+                span.innerHTML = field + " : " + data.Result[field] + " seconds <br>";
+                output.appendChild(span);
+            }
+        })
+        .catch(error => console.error(error));
+    });
+
+    btn3.addEventListener("click", function () {
+        console.log("here");
+        fetch('http://localhost:8082/')
+        .then(response => response.json())
+        .then(data => {
+            output.innerHTML = "";
+            let h1 = document.createElement("h1");
+            h1.innerHTML = "Interesting stats";
+            for(const field in data.Result){
+                let div = document.createElement("div");
+                let h1 = document.createElement("h2");
+                let p = document.createElement("p");
+                h1.innerHTML = field;
+                for(const field2 in data.Result[field]){
+                    p.innerHTML += field2 + ": " + data.Result[field][field2] + "<br>";
+                }
+                div.appendChild(h1);
+                div.appendChild(p);
+                output.appendChild(div);
+            }
+        })
+        .catch(error => console.error(error));
+    });
+
+
+</script>
+</html>

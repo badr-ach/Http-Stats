@@ -1,0 +1,8 @@
+C:\Users\Badr\Desktop\TD1\HttpListener\BasicServerHttpListener\bin\Debug\ConsoleApp3.exe.config
+C:\Users\Badr\Desktop\TD1\HttpListener\BasicServerHttpListener\bin\Debug\ConsoleApp3.exe
+C:\Users\Badr\Desktop\TD1\HttpListener\BasicServerHttpListener\bin\Debug\ConsoleApp3.pdb
+C:\Users\Badr\Desktop\TD1\HttpListener\BasicServerHttpListener\obj\Debug\BasicServerHTTPlistener.csproj.AssemblyReference.cache
+C:\Users\Badr\Desktop\TD1\HttpListener\BasicServerHttpListener\obj\Debug\BasicServerHTTPlistener.csproj.SuggestedBindingRedirects.cache
+C:\Users\Badr\Desktop\TD1\HttpListener\BasicServerHttpListener\obj\Debug\BasicServerHTTPlistener.csproj.CoreCompileInputs.cache
+C:\Users\Badr\Desktop\TD1\HttpListener\BasicServerHttpListener\obj\Debug\ConsoleApp3.exe
+C:\Users\Badr\Desktop\TD1\HttpListener\BasicServerHttpListener\obj\Debug\ConsoleApp3.pdb
